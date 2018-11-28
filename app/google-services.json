@@ -1,0 +1,55 @@
+{
+  "project_info": {
+    "project_number": "406033703924",
+    "firebase_url": "https://foodsale-858b0.firebaseio.com",
+    "project_id": "foodsale-858b0",
+    "storage_bucket": "foodsale-858b0.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:406033703924:android:65b817659caf382e",
+        "android_client_info": {
+          "package_name": "com.example.veronica.foodsale"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "406033703924-c7m9hjoq1lk6236evp1i3bsbfg66saem.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.veronica.foodsale",
+            "certificate_hash": "e47b1bbe3787091b71f11ca8628bcfc0832efb94"
+          }
+        },
+        {
+          "client_id": "406033703924-sg446p838o791cs40cqp39ckvfb9tc5r.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAZIyt312v4Ui5C0tn224y4ByWMHwig6gI"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "406033703924-sg446p838o791cs40cqp39ckvfb9tc5r.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
