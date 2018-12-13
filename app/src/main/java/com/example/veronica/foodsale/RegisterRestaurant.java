@@ -1,6 +1,6 @@
 package com.example.veronica.foodsale;
 
-import android.content.Context;
+import android.content.Intent;
 import android.location.Address;
 import android.location.Geocoder;
 import android.support.v7.app.AlertDialog;
@@ -23,10 +23,9 @@ import com.loopj.android.http.AsyncHttpClient;
 import com.loopj.android.http.JsonHttpResponseHandler;
 import com.loopj.android.http.RequestParams;
 
-import org.json.JSONArray;
+import org.json.JSONObject;
 
 import java.io.IOException;
-import java.util.Date;
 import java.util.List;
 import java.util.Locale;
 
@@ -39,6 +38,7 @@ public class RegisterRestaurant extends AppCompatActivity implements OnMapReadyC
     private TextView street;
     private Button next;
     private LatLng mainposition;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -53,39 +53,59 @@ public class RegisterRestaurant extends AppCompatActivity implements OnMapReadyC
         geocoder = new Geocoder(getBaseContext(), Locale.getDefault());
         street = findViewById(R.id.street);
         next = findViewById(R.id.next);
-        next.setOnClickListener(new View.OnClickListener() {
+        next.setOnClickListener(  new View.OnClickListener() {
             @Override
-            public void onClick(View v) {
+            public void onClick(View view) {
                 sendData();
-
             }
         });
 
 
-
     }
     public void  sendData (){
-        TextView name = findViewById(R.id.name);
-        TextView nit= findViewById(R.id.nit);
+        TextView nombre = findViewById(R.id.nombre);
+        TextView nit= findViewById(R.id.ci);
         TextView street = findViewById(R.id.street);
-        TextView property = findViewById(R.id.property);
-        TextView telf = findViewById(R.id.telf);
+        TextView propietario = findViewById(R.id.propietario);
+        TextView telefono = findViewById(R.id.telefono);
 
         AsyncHttpClient client = new AsyncHttpClient();
-        //client.addHeader("authorization", Data.TOKEN);
+        client.addHeader("authorization", Data.TOKEN);
+
         RequestParams params = new RequestParams();
-        params.add("name", name.getText().toString());
+        params.add("nombre", nombre.getText().toString());
         params.add("nit", nit.getText().toString());
-        params.add("street", street.getText().toString());
-        params.add("property", property .getText().toString());
-        params.add("phone", telf.getText().toString());
-        params.add("Lat", String.valueOf(mainposition.latitude));
-        params.add("Log", String.valueOf(mainposition.longitude));
+        params.add("street",street.getText().toString());
+        params.add("propietario", propietario.getText().toString());
+        params.add("telefono", telefono.getText().toString());
+        params.add("lat", String.valueOf(mainposition.latitude));
+        params.add("log", String.valueOf(mainposition.longitude));
 
-      // client.post(Data.REGISTER_RESTAURANT, params, new JsonHttpResponseHandler() {
-         //  public void  onSuccess(int statusCode)
 
-       //}
+        client.post(Data.REGISTER_RESTAURANT, params, new JsonHttpResponseHandler(){
+            @Override
+            public void onSuccess(int statusCode, Header[] headers, JSONObject response) {
+                AlertDialog alertDialog = new AlertDialog.Builder(RegisterRestaurant.this).create();
+                /*try {
+                    String msn = response.getString("msn");
+                    alertDialog.setTitle("RESPONSE SERVER");
+                    alertDialog.setMessage(msn);
+                    alertDialog.setButton(AlertDialog.BUTTON_NEUTRAL, "OK",
+                            new DialogInterface.OnClickListener() {
+                                public void onClick(DialogInterface dialog, int which) {
+                                    dialog.dismiss();
+                                }
+                            });
+                    alertDialog.show();
+                } catch (JSONException e) {
+                    e.printStackTrace();
+                }*/
+                Intent camera = new Intent( RegisterRestaurant.this, CameraPhoto.class);
+                startActivity(camera);
+
+                //AsyncHttpClient.log.w(LOG_TAG, "onSuccess(int, Header[], JSONObject) was not overriden, but callback was received");
+            }
+        });
 
     }
 
