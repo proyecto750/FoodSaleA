@@ -2,4 +2,6 @@
     <string name="app_name">FoodSale</string>
     <string name="title_activity_maps">Map</string>
     <string name="not_log_in">error al iniciar</string>
+    <string name="action_settings">Settings</string>
+
 </resources>
