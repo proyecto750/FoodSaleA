@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.example.veronica.foodsale">
-
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION"/>
     <uses-permission android:name="android.permission.INTERNET" />
     <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
     <uses-permission android:name="android.permission.CAMERA" />
@@ -22,6 +22,10 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
+<<<<<<< HEAD
+=======
+        <activity android:name=".RegisterRestaurant"/>
+>>>>>>> de9b377e2808dbe930107bb8ee2db0addbd9e80f
         <activity android:name=".MainActivity" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -50,6 +54,7 @@
             android:label="@string/title_activity_maps" />
         <activity android:name=".CameraPhoto" />
         <activity android:name=".CrearMenu" />
+<<<<<<< HEAD
         <activity android:name=".RegistarUsuario">
 
         </activity>
@@ -58,6 +63,10 @@
 
         </activity>
 
+=======
+        <activity android:name=".HacerPedidos" />
+        <activity android:name=".RegistroUsuario"></activity>
+>>>>>>> de9b377e2808dbe930107bb8ee2db0addbd9e80f
     </application>
 
 </manifest>

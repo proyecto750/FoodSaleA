@@ -64,7 +64,11 @@ public class MainActivity extends AppCompatActivity implements GoogleApiClient.O
         signInButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+<<<<<<< HEAD
                 Intent intent = new Intent(MainActivity.this,tablas.class);
+=======
+                Intent intent = new Intent(MainActivity.this,RegistroUsuario.class);
+>>>>>>> de9b377e2808dbe930107bb8ee2db0addbd9e80f
                 startActivity(intent);
             }
         });
@@ -73,7 +77,11 @@ public class MainActivity extends AppCompatActivity implements GoogleApiClient.O
         registro_client.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+<<<<<<< HEAD
                 Intent intent = new Intent(MainActivity.this,RegistarUsuario.class);
+=======
+                Intent intent = new Intent(MainActivity.this,RegistroUsuario.class);
+>>>>>>> de9b377e2808dbe930107bb8ee2db0addbd9e80f
                 startActivity(intent);
             }
         });
@@ -91,7 +99,11 @@ public class MainActivity extends AppCompatActivity implements GoogleApiClient.O
         pedidos_rest.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+<<<<<<< HEAD
                 Intent intent = new Intent(MainActivity.this,seleccionar.class);
+=======
+                Intent intent = new Intent(MainActivity.this,HacerPedidos.class);
+>>>>>>> de9b377e2808dbe930107bb8ee2db0addbd9e80f
                 startActivity(intent);
             }
         });

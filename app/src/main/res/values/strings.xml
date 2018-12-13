@@ -1,5 +1,11 @@
 <resources>
     <string name="app_name">FoodSale</string>
     <string name="title_activity_maps">Map</string>
+<<<<<<< HEAD
     <string name="not_log_in">Map</string>
+=======
+    <string name="not_log_in">error al iniciar</string>
+    <string name="action_settings">Settings</string>
+
+>>>>>>> de9b377e2808dbe930107bb8ee2db0addbd9e80f
 </resources>
